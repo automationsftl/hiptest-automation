@@ -7,7 +7,11 @@ from hiptest.actionwords import Actionwords
 
 class TestFYM(unittest.TestCase):
     def setUp(self):
-        self.actionwords = Actionwords(WebApp())
+        self.webApp = WebApp()
+        self.actionwords = Actionwords(self.webApp)
+
+    def tearDown(self):
+        self.webApp.quit()
 
     def smoke__as_a_teacher_i_can_login_in_the_application(self, username, password, subject):
         # Tags: status priority_P0 test_case_level_Smoke JIRA:FY-11

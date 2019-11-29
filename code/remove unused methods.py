@@ -23,7 +23,7 @@ for i, action_line in enumerate(actions_lines[12:]):
 
     if action_line.strip().startswith("def "):
         method_name = action_line.strip().replace("def ", "")
-        method_name = "self.actionwords." + method_name[:method_name.index("(")]
+        method_name = "self.actionwords." + method_name[:method_name.index("(")] + "("
 
         method_exists = False
         for test_line in test_lines:

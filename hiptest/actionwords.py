@@ -31,9 +31,6 @@ class Actionwords:
     def clicks_on_a_question(self):
         pass
 
-    def a_teacher_on_the_homepage(self):
-        pass
-
     def clicks_on_an_assignment(self):
         pass
 
@@ -52,9 +49,6 @@ class Actionwords:
     def teacher_enters_in_the_login_page_p1_and_p2(self, p1 = "", p2 = ""):
         self.loginPage.enter_username(p1)
         self.loginPage.enter_password(p2)
-
-    def he_navigate_to_a_different_page(self):
-        pass
 
     def a_student_on_subject_homepage(self):
         pass
@@ -122,9 +116,6 @@ class Actionwords:
     def he_is_able_to_navigate_through_the_classes(self):
         pass
 
-    def he_logs_in(self):
-        pass
-
     def logs_in_and_lands_on_the_homepage_and_sees(self, p1 = ""):
         homepage_single_subject = self.homePage.is_homepage() and self.homePage.has_subject(p1)
         subjects_multiple = self.subjectsPage.is_multiple_subjects_page() and self.subjectsPage.has_subject_in_list(p1)
@@ -156,9 +147,6 @@ class Actionwords:
         pass
 
     def is_no_longer_displayed_in_assignments_tab(self):
-        pass
-
-    def he_sees(self):
         pass
 
     def a_user_logged_in_the_application_apc(self):
@@ -203,9 +191,6 @@ class Actionwords:
     def the_teacher_logs_in(self):
         pass
 
-    def no_pre_ap_subject(self):
-        pass
-
     def a_teacher_on_p1_page__results_tab(self, p1 = "p1"):
         pass
 
@@ -233,13 +218,7 @@ class Actionwords:
     def the_teacher_opens_student_performance_for_a_specific_student(self):
         pass
 
-    def there_is_feedback_already_given_for_that_student(self):
-        pass
-
     def he_should_see_the_feedback_box_with_the_actual_feedback(self):
-        pass
-
-    def there_is_feedback_already_given(self):
         pass
 
     def there_is_feedback_already_given_for_that_student_from_progress_tab(self):
@@ -254,12 +233,6 @@ class Actionwords:
     def teacher_navigates_to_assign_tab(self):
         pass
 
-    def the_pop(self):
-        pass
-
-    def the_teacher_is_already_in_the_ua_assign_assign_modal_window(self):
-        pass
-
     def the_teacher_is_already_in_the_ua_assign_assign_modal_window_quick_assign_section(self):
         pass
 
@@ -272,9 +245,6 @@ class Actionwords:
     def he_sees_on_the_right_side_a_button_for_switching_onoff(self):
         pass
 
-    def then(self):
-        pass
-
     def he_logs_in_and_navigates_to_the_homepage_of_a_p1_subject(self, p1 = "p1"):
         pass
 
@@ -285,9 +255,6 @@ class Actionwords:
         pass
 
     def that_tab_becomes_highlighted_on_white(self):
-        pass
-
-    def g(self):
         pass
 
     def a_teacher_on_the_login_page_opened_on_p2_using_p3(self, p2 = "p2", p3 = "p3"):
@@ -343,13 +310,7 @@ class Actionwords:
 
         assert (self.unit_text == current_unit_text) is True
 
-    def a_p1_logs_in(self, p1 = ""):
-        pass
-
     def he_sees_each_unit_and_its_content_displayed_in_a_tab(self):
-        pass
-
-    def that(self):
         pass
 
     def a_teacher_on_progress_check__progress_page__frq_assessment(self):
@@ -368,12 +329,6 @@ class Actionwords:
         pass
 
     def he_sees_the_response_on_the_left_side_of_the_page(self):
-        pass
-
-    def the_score_is_saved_automatically(self):
-        pass
-
-    def he_naviga(self):
         pass
 
     def the_popup_will_disappear_after_1_second(self):
@@ -415,16 +370,7 @@ class Actionwords:
     def the_popup_closes_and_he_is_taken_back_to_assignments_tab_url__assessmentsassignments(self):
         pass
 
-    def the_teacher_is_on_the(self):
-        pass
-
-    def the_teacher_is_on(self):
-        pass
-
     def teacher_is_p1_teacher(self, p1 = ""):
-        pass
-
-    def he_clicks_on(self):
         pass
 
     def he_navigates_to_that_specific_class_in_the_class_widget(self):
@@ -484,18 +430,6 @@ class Actionwords:
     def a_teacher_has_assigned_more_than_6_quizzes_to_a_class(self):
         pass
 
-    def gi(self):
-        pass
-
-    def a(self):
-        pass
-
-    def a_p1(self, p1 = "p1"):
-        pass
-
-    def a_teacher_on_p1_page(self, p1 = ""):
-        pass
-
     def teacher_lands_on_the_course_homepage_and_sees_p1_in_the_page_header(self, p1 = ""):
         pass
 
@@ -516,4 +450,3 @@ class Actionwords:
 
     def teacher_navigates_to_progress_checks_progress_tab(self):
         pass
-

@@ -8,4 +8,5 @@ class WebApp(object):
         self.driver.maximize_window()
 
     def quit(self):
+        self.driver.close()
         self.driver.quit()

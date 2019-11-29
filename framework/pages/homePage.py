@@ -24,3 +24,28 @@ class HomePage(object):
             return True
         except NoSuchElementException:
             return False
+
+    def select_unit_tab(self):
+        units = self.__driver.find_elements_by_xpath(".//div[@class='unitsWidget']//div[contains(@class, 'ResponsiveTabs--items')]//a[@role='button']")
+        index = int(len(units)/2)
+
+        self.__driver.execute_script("arguments[0].scrollIntoView();", units[index])
+        units[index].click()
+
+        return units[index].text
+
+    def navigate_to_dashboard(self):
+        dashboard_xpath = ".//a[contains(@href, '/dashboard')]"
+        self.__driver.find_element_by_xpath(dashboard_xpath).click()
+
+    def navigate_to_homePage(self):
+        home_xpath = ".//a[contains(@href, '/home')]"
+        self.__driver.find_element_by_xpath(home_xpath).click()
+
+    def get_selected_unit(self):
+        selected_unit_xpath = ".//div[contains(@class, 'ResponsiveTabs--item is-selected')]"
+
+        selected_unit = self.__driver.find_element_by_xpath(selected_unit_xpath)
+        return selected_unit.text
+
+

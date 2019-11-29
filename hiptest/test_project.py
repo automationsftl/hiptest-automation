@@ -45,7 +45,6 @@ class TestFYM(unittest.TestCase):
         self.smoke__as_a_teacher_i_can_login_in_the_application(username = 'teacher.physicschemistry@testschool.org', password = 'password', subject = 'Physics C: Electricity & Magnetism')
 
 
-
     def smoke__ap_only_teacher_multiple_ap_subjects_onscreen(self):
         # Tags: priority_P1 test_case_level_Smoke JIRA:PREAP-51 JIRA:PREAP-50 JIRA:PREAP-275 Regression
         # Given a teacher with multiple AP subjects on the login page

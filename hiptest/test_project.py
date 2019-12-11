@@ -1,11 +1,17 @@
 # encoding: UTF-8
 import unittest
+
 from framework.browser import WebApp
 from hiptest.actionwords import Actionwords
 
+
 class TestFYM(unittest.TestCase):
     def setUp(self):
-        self.actionwords = Actionwords(WebApp())
+        self.webApp = WebApp()
+        self.actionwords = Actionwords(self.webApp)
+
+    def tearDown(self):
+        self.webApp.quit()
 
     def smoke__as_a_teacher_i_can_login_in_the_application(self, username, password, subject):
         # Tags: status priority_P0 test_case_level_Smoke JIRA:FY-11
@@ -19,7 +25,7 @@ class TestFYM(unittest.TestCase):
         self.actionwords.logs_in_and_lands_on_the_homepage_and_sees(p1 = subject)
 
     def test_Smoke__As_a_teacher_I_can_login_in_the_application__uid2bd7e766ab97489198cfa1cdb2e89eda(self):
-        self.smoke__as_a_teacher_i_can_login_in_the_application(username = 'teacher.worldhistory@testschool.org', password = 'password', subject = 'World History')
+        self.smoke__as_a_teacher_i_can_login_in_the_application(username = 'teacher.worldhistory@testschool.org', password = 'password', subject = 'AP World History: Modern')
 
     def test_Smoke__As_a_teacher_I_can_login_in_the_application__uid9059fd48d38747f4bc60d075fd948042(self):
         self.smoke__as_a_teacher_i_can_login_in_the_application(username = 'teacher.calculus@testschool.org', password = 'password', subject = 'Calculus')
@@ -41,7 +47,6 @@ class TestFYM(unittest.TestCase):
 
     def test_Smoke__As_a_teacher_I_can_login_in_the_application__uid808eebea55a14e85bc969b72a8f5dfc8(self):
         self.smoke__as_a_teacher_i_can_login_in_the_application(username = 'teacher.physicschemistry@testschool.org', password = 'password', subject = 'Physics C: Electricity & Magnetism')
-
 
 
     def smoke__ap_only_teacher_multiple_ap_subjects_onscreen(self):

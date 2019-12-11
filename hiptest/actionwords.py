@@ -11,18 +11,35 @@ class Actionwords:
         self.subjectsPage = SubjectsPage(webApp)
 
     def clicks_assign_button_for_an_assessment(self):
-        pass
+
+        # find button and click
+        position = 0
+
+        self.title = self.homePage.get_title(position)
+        self.homePage.click_assign_button(position)
 
     def selects_a_class(self):
-        pass
+
+        # valid popup
+        assert self.homePage.is_valid_popup(self.title) is True
+
+        # get class name and click on checkbox
+
+        # click on Unlock the Assessment Now? toggle
 
     def clicks_on_assign_button(self):
+        # click on update
+
         pass
 
     def the_assessmentquiz_is_assigned_to_that_class(self):
+        # check for class name
+
         pass
 
     def is_redirected_to_progress_tab(self):
+        # check for redirect to progress check
+
         pass
 
     def a_teacher_on_homepage(self):
@@ -440,7 +457,19 @@ class Actionwords:
         pass
 
     def a_teacher_on_assign_tab_from_progress_checks_page(self):
-        pass
+        # login
+        self.loginPage.go_to()
+        self.loginPage.enter_username("matrix.teacher@testschool.org")
+        self.loginPage.enter_password("password")
+        self.loginPage.click_login()
+
+        # hw check if  home page
+        # hw assert isHomepage is True
+
+        # go to progress checks page
+
+        self.homePage.navigate_to_progress_check()
+        # hw check if progress check page
 
     def the_quiz_player_is_displayed(self):
         pass

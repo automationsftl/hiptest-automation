@@ -10,6 +10,7 @@ class Actionwords:
         self.homePage = HomePage(webApp)
         self.subjectsPage = SubjectsPage(webApp)
         self.AppHeaderComponent = AppHeaderComponent(webApp)
+        self.
 
     def clicks_assign_button_for_an_assessment(self):
         #find button

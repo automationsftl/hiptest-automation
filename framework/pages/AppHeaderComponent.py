@@ -39,7 +39,9 @@ class AppHeaderComponent(object):
         except NoSuchElementException:
             return False
 
-    def select_checkbox(self , position):
+    def select_checkbox(self):
         checkbox_xpath = ".//div[@class='custom-checkbox']"
-        self.__driver.find_element_by_xpath(checkbox_xpath)[position].click()
+        self.__driver.find_element_by_xpath(checkbox_xpath).click()
+
+    def 
 

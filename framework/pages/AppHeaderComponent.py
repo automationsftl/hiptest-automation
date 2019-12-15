@@ -1,6 +1,3 @@
-from selenium.common.exceptions import NoSuchElementException
-
-
 class AppHeaderComponent(object):
     def __init__(self, webapp):
         self.__driver = webapp.driver
@@ -32,7 +29,7 @@ class AppHeaderComponent(object):
         title_element = title_elements[position]
         return title_element.text
 
-    def is_valid_popup(self, title):
+    def is_valid_popup(self , title):
          try:
 
             title_xpath = ".//div[@class='Modal']//div[text()= '" + title + "']"
@@ -41,3 +38,8 @@ class AppHeaderComponent(object):
             return True
         except NoSuchElementException:
             return False
+
+    def select_checkbox(self , position):
+        checkbox_xpath = ".//div[@class='custom-checkbox']"
+        self.__driver.find_element_by_xpath(checkbox_xpath)[position].click()
+

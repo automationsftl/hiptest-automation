@@ -9,20 +9,21 @@ class Actionwords:
         self.loginPage = LoginPage(webApp)
         self.homePage = HomePage(webApp)
         self.subjectsPage = SubjectsPage(webApp)
+        self.AppHeaderComponent = AppHeaderComponent(webApp)
 
     def clicks_assign_button_for_an_assessment(self):
         #find button
         position = 8
-        self.title = self.homePage.get_title()
-        self.homePage.click_assign_button()
+        self.title = self.AppHeaderComponent.get_title()
+        self.AppHeaderComponent.click_assign_button()
 
 
     def selects_a_class(self):
         #get title from popup
-        assert  self.App
-        .is_valid_popup(self.title) is True
+        assert  self.AppHeaderComponent.is_valid_popup(self) is True
         #click on checkbox
-
+        position = 0
+        self.AppHeaderComponent.
         #click on unlock toggle
 
 

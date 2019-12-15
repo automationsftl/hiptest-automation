@@ -19,7 +19,8 @@ class Actionwords:
 
     def selects_a_class(self):
         #get title from popup
-        assert  self.homePage.is_valid_popup(self.title) is True
+        assert  self.App
+        .is_valid_popup(self.title) is True
         #click on checkbox
 
         #click on unlock toggle

@@ -10,7 +10,7 @@ class Actionwords:
         self.homePage = HomePage(webApp)
         self.subjectsPage = SubjectsPage(webApp)
         self.AppHeaderComponent = AppHeaderComponent(webApp)
-        self.
+        self.PPC = PPC(webApp)
 
     def clicks_assign_button_for_an_assessment(self):
         #find button
@@ -24,8 +24,9 @@ class Actionwords:
         assert  self.AppHeaderComponent.is_valid_popup(self) is True
         #click on checkbox
         position = 0
-        self.AppHeaderComponent.
+        self.AppHeaderComponent.select_checkbox()
         #click on unlock toggle
+
 
 
 
@@ -461,7 +462,7 @@ class Actionwords:
         #check if homepage
         #assert is homepage is true
         #go to progress checks paage
-        self.homePage.navigate_to_progress_check()
+        self.PPC.navigate_to_progress_check()
         #check if progress checks page
 
     def the_quiz_player_is_displayed(self):

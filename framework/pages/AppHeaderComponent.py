@@ -43,5 +43,6 @@ class AppHeaderComponent(object):
         checkbox_xpath = ".//div[@class='custom-checkbox']"
         self.__driver.find_element_by_xpath(checkbox_xpath).click()
 
-    def 
+    def select_toggle(self):
+        toggle_xpath =
 

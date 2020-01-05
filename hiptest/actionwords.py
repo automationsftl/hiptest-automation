@@ -23,11 +23,13 @@ class Actionwords:
         # get popup title
         assert self.progressChecksPage.is_valid_popup(self.title) is True
         # click on a checkbox
+        self.progressChecksPage.click_checkbox()
         # click on unlock the assessment now toggle
-
+        self.progressChecksPage.click_unlock_toggle()
 
     def clicks_on_assign_button(self):
         # click on update
+        self.progressChecksPage.click_update()
 
     def the_assessmentquiz_is_assigned_to_that_class(self):
         # check for redirect t progress

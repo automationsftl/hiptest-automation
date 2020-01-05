@@ -24,6 +24,18 @@ class ProgressCheckPage(object):
         except NoSuchElementException:
             return False
 
+    def click_checkbox(self):
+        checkbox_xpath = ".//div[@class='custom-checkbox']"
+        self.__driver.find_element_by_xpath(checkbox_xpath).click()
+
+    def click_unlock_toggle(self):
+        unlock_toggle_xpath = ".//div[@class='slide_switch switch_on switch_off']"
+        self.__driver.find_element_by_xpath(unlock_toggle_xpath).click()
+
+    def click_update(self):
+        update_xpath = ".//button[@class='btn btn--color_blue btn--size_medium AccessibilityWrapper btn--override btn-yes']"
+        self.__driver.find_element_by_xpath(update_xpath).click()
+
 
     def is_progress_check(self):
         try:

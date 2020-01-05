@@ -1,7 +1,8 @@
 # encoding: UTF-8
-
+from framework.pages.appHeaderComponent import AppHeaderComponent
 from framework.pages.homePage import HomePage
 from framework.pages.loginPage import LoginPage
+from framework.pages.progressChecksPage import ProgressCheckPage
 from framework.pages.subjectsPage import SubjectsPage
 
 class Actionwords:
@@ -9,16 +10,18 @@ class Actionwords:
         self.loginPage = LoginPage(webApp)
         self.homePage = HomePage(webApp)
         self.subjectsPage = SubjectsPage(webApp)
+        self.progressChecksPage = ProgressCheckPage(webApp)
+        self.appHeaderComponent = AppHeaderComponent(webApp)
 
     def clicks_assign_button_for_an_assessment(self):
         # find Assign button
         position = 1
-        self.title = self.homePage.get_title()
-        self.homePage.click_assign_button()
+        self.title = self.progressChecksPage.get_title()
+        self.progressChecksPage.click_assign_button()
 
     def selects_a_class(self):
         # get popup title
-        assert self.homePage.is_valid_popup(self.title) is True
+        assert self.progressChecksPage.is_valid_popup(self.title) is True
         # click on a checkbox
         # click on unlock the assessment now toggle
 
@@ -289,7 +292,7 @@ class Actionwords:
         self.unit_text = self.homePage.select_unit_tab()
 
     def he_navigate_to_a_different_page_of_the_same_subject(self):
-        self.homePage.navigate_to_dashboard()
+        self.appHeaderComponent.navigate_to_dashboard()
 
         assert self.homePage.is_homepage() is False
 
@@ -451,11 +454,9 @@ class Actionwords:
         self.loginPage.enter_username("MATRIX.Teacher@testschool.org")
         self.loginPage.enter_password("password")
         self.loginPage.click_login()
-        # tema: check if homepage -> assert IsHompege  IS TRUE
-
-        self.homePage.navigate_to_progress_check()
-        # tema:  check if progress check page-> assert is progress check  IS TRUE
-
+        assert self.homePage.is_homepage() is True
+        self.appHeaderComponent.navigate_to_progress_check()
+        assert  self.progressChecksPage.is_progress_check() is True
 
     def the_quiz_player_is_displayed(self):
         pass

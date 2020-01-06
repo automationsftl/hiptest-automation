@@ -46,6 +46,11 @@ class HomePage(object):
         home_xpath = ".//a[contains(@href, '/home')]"
         self.__driver.find_element_by_xpath(home_xpath).click()
 
+
+    def navigate_to_progress_check(self):
+        progress_xpath = ".//a[contains(@href, '/assessments/assign')]"
+        self.__driver.find_element_by_xpath(progress_xpath).click()
+
     def get_selected_unit(self):
         selected_unit_xpath = ".//div[contains(@class, 'ResponsiveTabs--item is-selected')]"
 

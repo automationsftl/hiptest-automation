@@ -1,4 +1,4 @@
-<<<<<<< HEAD
 .idea/
 venv/
-
+./hiptest/chromedriver.exe
+./chromedriver.exe
